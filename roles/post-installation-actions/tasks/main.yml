@@ -1,0 +1,20 @@
+---
+# Directory Handling
+- name: "Creating workspace directory"
+  file:
+    path: "{{ ansible_env.HOME }}/workspace/"
+    state: directory
+
+# Decompressing rockyou.txt file
+- name: "Checking if rockyou.txt.gz exists"
+  stat:
+    path: /usr/share/wordlists/rockyou.txt.gz
+  register: rockyou_txt_exists
+
+- name: "Decompressing rockyou.txt.gz"
+  shell: |
+    cd /usr/share/wordlists
+    gzip -d rockyou.txt.gz
+  become: true
+  become_method: sudo
+  when: rockyou_txt_exists.stat.exists
