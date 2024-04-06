@@ -1,33 +1,35 @@
 * {
-    background-color:  @transparent;
-}
+	foreground: #e53935ff;
+    background:    #242424A5;
+    background-alt:    	#2B2B2BFF;
+    border:    #375A7Fff;
+    selected:    #375A7Fff;
+    urgent:    #FFC107ff;
+	logo:    #e53935ff;
+	on:    #4CAF50ff;
+	off:    #757575ff;
+    white: #ffffff;
+    transparent: #00000000;
 
-@import "colors.rasi"
-
-configuration {
-    font:                           "Iosevka Nerd Font 10";
-    show-icons:                     false;
-	icon-theme: 					"Papirus";
-    display-drun: 					":";
-    drun-display-format:            "{name}";
-    threads:                        0;
-    scroll-method:                  0;
-    disable-history:                false;
-    fullscreen:                     false;
-	hide-scrollbar: 				true;
-	sidebar-mode: 					false;
-    location:                       3;
+    highlight:     underline bold #eceff4;
+    backlight:   #ccffeedd;
+    background-color:  transparent;
 }
 
 window {
-    transparency:                   "real";
-    background-color:               @transparent;
-    text-color:                     @foreground;
-    border-radius:                  10px;
-    height:                         255px;
-    width:                          12%;
-    x-offset:                       -30;
-    y-offset:                       70;
+    location: center;
+    anchor:   center;
+    transparency: "screenshot";
+
+    background-color: @transparent;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
 }
 
 textbox-prompt-colon {

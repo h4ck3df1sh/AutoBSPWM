@@ -70,6 +70,7 @@ applications:
   - sxhkd
   - imagemagick
   - cmatrix
-  - lsd
+#  - lsd
   - gettext
   - jq
+  - zsh

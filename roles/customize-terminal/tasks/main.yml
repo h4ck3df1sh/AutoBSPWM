@@ -11,6 +11,11 @@
     src: "{{ role_path }}/files/.zshrc"
     dest: "{{ ansible_env.HOME }}"
 
+- name: "Copying .zshrc.bk config to HOME directory"
+  copy:
+    src: "{{ role_path }}/files/.zshrc.bk"
+    dest: "{{ ansible_env.HOME }}"
+
 - name: "Removing .zshrc config from root directory"
   file:
     path: "/root/.zshrc"

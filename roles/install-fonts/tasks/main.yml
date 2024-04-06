@@ -12,3 +12,17 @@
     dest: "/usr/share/fonts/truetype/"
   become: true
   become_method: sudo
+
+- name: "Installing Firacode Fonts"
+  copy:
+    src: "{{ role_path }}/files/firacode_fonts/"
+    dest: "/usr/share/fonts/truetype/"
+  become: true
+  become_method: sudo
+
+- name: "Installing FiracodeNerd Fonts"
+  copy:
+    src: "{{ role_path }}/files/firacodenerd_fonts/"
+    dest: "/usr/share/fonts/truetype/"
+  become: true
+  become_method: sudo

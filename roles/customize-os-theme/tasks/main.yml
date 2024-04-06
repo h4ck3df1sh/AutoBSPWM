@@ -70,8 +70,18 @@
 
 - name: "Copying Rofi Nord Theme to {{ ansible_env.HOME }}/.config/rofi/themes"
   copy:
-    src: "{{ role_path }}/files/nord.rasi"
+    src: "{{ role_path }}/files/rofi/nord.rasi"
     dest: "{{ ansible_env.HOME }}/.config/rofi/themes"
+
+- name: "Copying Custom Theme to {{ ansible_env.HOME }}/.config/rofi/themes"
+  copy:
+    src: "{{ role_path }}/files/rofi/current-theme.rasi"
+    dest: "{{ ansible_env.HOME }}/.config/rofi/themes"
+
+- name: "Copying Rofi Config file to {{ ansible_env.HOME }}/.config/rofi/"
+copy:
+  src: "{{ role_path }}/files/rofi/config.rasi"
+  dest: "{{ ansible_env.HOME }}/.config/rofi/"
 
 - name: "Creating {{ ansible_env.HOME }}/.config/rofi symlink in root directory"
   file:

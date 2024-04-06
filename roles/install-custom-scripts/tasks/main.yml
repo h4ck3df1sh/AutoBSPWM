@@ -11,7 +11,7 @@
     path: "/usr/local/bin/{{ item }}"
     mode: '0755'
   loop:
-    - "screenshot"
+#    - "screenshot"
     - "whichSystem.py"
   become: true
   become_method: sudo
