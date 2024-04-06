@@ -14,9 +14,9 @@ Follow these steps to set up your system:
 
     ```bash
     sudo apt update && sudo apt full-upgrade -y
-    sudo apt install ansible-core
+    sudo apt install ansible-core git -y
     mkdir Tools && cd Tools
-    git clone [repository_URL]
+    git clone https://github.com/h4ck3df1sh/Ubuntu-Customization.git
     ```
 
 2. **Cache Sudo Authentication:** Execute a command with sudo privileges to cache the authentication:
@@ -28,7 +28,7 @@ Follow these steps to set up your system:
 3. **Run Ansible Playbook:** Navigate to the root directory of the repository and run the main playbook:
 
     ```bash
-    cd [repository_directory]
+    cd Ubuntu-Customization
     ansible-playbook main.yml
     ```
 

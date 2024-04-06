@@ -9,4 +9,4 @@ configuration {
     display-combi:  "";
     show-icons:     true;
 }
-@theme "/home/h4ck3df1sh/.config/rofi/current-theme.rasi"
+@theme "HOME/.config/rofi/themes/current-theme.rasi"

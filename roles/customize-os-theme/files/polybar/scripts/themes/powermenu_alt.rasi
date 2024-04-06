@@ -1,9 +1,3 @@
-* {
-    background-color:  @transparent;
-}
-
-@import "colors.rasi"
-
 configuration {
     font:                           "Iosevka Nerd Font 10";
     show-icons:                     false;
@@ -18,6 +12,12 @@ configuration {
 	sidebar-mode: 					false;
     location:                       3;
 }
+
+* {
+    background-color:  @transparent;
+}
+
+@import "colors.rasi"
 
 window {
     transparency:                   "real";

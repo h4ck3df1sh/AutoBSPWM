@@ -79,15 +79,21 @@
     dest: "{{ ansible_env.HOME }}/.config/rofi/themes"
 
 - name: "Copying Rofi Config file to {{ ansible_env.HOME }}/.config/rofi/"
-copy:
-  src: "{{ role_path }}/files/rofi/config.rasi"
-  dest: "{{ ansible_env.HOME }}/.config/rofi/"
+  copy:
+    src: "{{ role_path }}/files/rofi/config.rasi"
+    dest: "{{ ansible_env.HOME }}/.config/rofi/"
 
 - name: "Creating {{ ansible_env.HOME }}/.config/rofi symlink in root directory"
   file:
     src: "{{ ansible_env.HOME }}/.config/rofi"
     dest: "/root/.config/rofi"
     state: link
+  become: true
+  become_method: sudo
+
+- name: "Changing Rofi theme path"
+  shell: |
+    sed -i "s/HOME/'{{ ansible_env.HOME }}'/g" {{ ansible_env.HOME }}/.config/rofi/config.rasi
   become: true
   become_method: sudo
 

@@ -7,7 +7,7 @@
 
 - name: "Installing non apt dependencies"
   shell: |
-    wget https://github.com/lsd-rs/lsd/releases/download/v1.1.2/lsd_1.1.2_amd64.deb && sudo apt install lsd_1.1.2_amd64.deb
+    wget https://github.com/lsd-rs/lsd/releases/download/v1.1.2/lsd_1.1.2_amd64.deb && sudo apt install ./lsd_1.1.2_amd64.deb
 
 - name: "Installing Polybar dependencies"
   apt:

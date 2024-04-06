@@ -3,6 +3,7 @@ main_dependencies:
   - build-essential
   - libxcb-keysyms1-dev
   - libxcb-xtest0-dev
+  - net-tools
 
 polybar_dependencies:
   - cmake
