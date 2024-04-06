@@ -16,7 +16,7 @@ Follow these steps to set up your system:
     sudo apt update && sudo apt full-upgrade -y
     sudo apt install ansible-core git -y
     mkdir Tools && cd Tools
-    git clone https://github.com/h4ck3df1sh/Ubuntu-Customization.git
+    git clone https://github.com/h4ck3df1sh/Ubuntu-BSPWM.git
     ```
 
 2. **Cache Sudo Authentication:** Execute a command with sudo privileges to cache the authentication:
@@ -28,7 +28,7 @@ Follow these steps to set up your system:
 3. **Run Ansible Playbook:** Navigate to the root directory of the repository and run the main playbook:
 
     ```bash
-    cd Ubuntu-Customization
+    cd Ubuntu-BSPWM
     ansible-playbook main.yml
     ```
 
