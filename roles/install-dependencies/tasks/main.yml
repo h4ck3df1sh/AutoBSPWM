@@ -5,10 +5,6 @@
   become: true
   become_method: sudo
 
-- name: "Installing non apt dependencies"
-  shell: |
-    wget https://github.com/lsd-rs/lsd/releases/download/v1.1.2/lsd_1.1.2_amd64.deb && sudo apt install ./lsd_1.1.2_amd64.deb
-
 - name: "Installing Polybar dependencies"
   apt:
     pkg: "{{ polybar_dependencies }}"
@@ -26,6 +22,19 @@
     pkg: "{{ applications }}"
   become: true
   become_method: sudo
+
+- name: "Installing LSD"
+  ansible.builtin.shell: |
+    wget https://github.com/lsd-rs/lsd/releases/download/v1.1.2/lsd_1.1.2_amd64.deb && sudo apt install ./lsd_1.1.2_amd64.deb
+  when: ansible_distribution == "Ubuntu"
+
+- name: "Installing LSD"
+  apt:
+    pkg: "lsd"
+  become: true
+  become_method: sudo
+  when: ansible_distribution == "Kali"
+
 
 - name: "Making the current user owner of /opt for further installation of packages"
   file:

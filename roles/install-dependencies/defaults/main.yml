@@ -71,7 +71,6 @@ applications:
   - sxhkd
   - imagemagick
   - cmatrix
-#  - lsd
   - gettext
   - jq
   - zsh
