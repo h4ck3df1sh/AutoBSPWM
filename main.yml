@@ -1,5 +1,5 @@
 ---
-- name: "Customizing Kali"
+- name: "Customizing BSPWM desktop"
   hosts: localhost
   connection: local
   roles:
