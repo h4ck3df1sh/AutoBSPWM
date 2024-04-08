@@ -1,8 +1,13 @@
 ---
 # Directory Handling
-- name: "Creating workspace directory"
+- name: "Creating Tools directory"
   file:
-    path: "{{ ansible_env.HOME }}/workspace/"
+    path: "{{ ansible_env.HOME }}/Tools/"
+    state: directory
+
+- name: "Creating Machines directory"
+  file:
+    path: "{{ ansible_env.HOME }}/Machines/"
     state: directory
 
 # Decompressing rockyou.txt file

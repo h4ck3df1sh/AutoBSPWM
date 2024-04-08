@@ -16,7 +16,7 @@ Automate your system's transformation with our scripts, ensuring a productive en
     ```
   - Clone the setup repository:
     ```bash
-    mkdir Tools && cd Tools
+    mkdir Github && cd Github
     git clone https://github.com/h4ck3df1sh/AutoBSPWM.git && cd AutoBSPWM
     ```
 
