@@ -93,7 +93,7 @@
 
 - name: "Changing Rofi theme path"
   shell: |
-    sed -i "s/HOME/'{{ ansible_env.HOME }}'/g" {{ ansible_env.HOME }}/.config/rofi/config.rasi
+    sed -i 's|HOME|'{{ ansible_env.HOME }}'|g' /path/to/your/config.rasi
   become: true
   become_method: sudo
 
